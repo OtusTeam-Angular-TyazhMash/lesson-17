@@ -1,0 +1,14 @@
+<p>can-deactivate works!</p>
+Form is <strong>{{ isFormSaved ? '' : 'NOT' }}</strong> saved
+<form [formGroup]="userForm" (submit)="isFormSaved = true">
+  <label for="first-name">First Name: </label>
+  <input id="first-name" formControlName="firstName" />
+  <br />
+  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form>
+
+<div *ngIf="openConfirmDialog">
+  <strong>Are you sure? </strong>
+  <button (click)="onConfirmClick()">Confirm</button>
+  <button (click)="onCancelClick()">Cancel</button>
+</div>

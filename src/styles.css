@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+
+:root {
+  --main-color: #39ac31;
+  --main-color__darknest: #298822;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: rgb(68, 59, 59);
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+body {
+  padding: 0 12px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+a {
+  color: rgb(43, 73, 47);
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
