@@ -14,7 +14,7 @@ export class ResolveComponent implements OnInit {
   );
 
   constructor(private route: ActivatedRoute) {
-    route.data.pipe(tap((d) => console.log(d))).subscribe();
+    //route.data.pipe(tap((d) => console.log(d))).subscribe();
   }
 
   ngOnInit() {}

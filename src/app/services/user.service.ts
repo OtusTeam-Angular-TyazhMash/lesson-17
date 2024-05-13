@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { delay, of } from 'rxjs';
+import {delay, Observable, of} from 'rxjs';
 
 export type User = {
   id: number;
@@ -10,7 +10,7 @@ export type User = {
 export class UserService {
   constructor() {}
 
-  getUsers(timeout: number = 1000) {
+  getUsers(timeout: number = 1000): Observable<User[]> {
     return of([
       { id: 1, name: 'First User' },
       { id: 2, name: 'Second User' },

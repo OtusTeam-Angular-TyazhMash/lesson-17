@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { BehaviorSubject, Subject } from 'rxjs';
+import {BehaviorSubject, Observable, Subject} from 'rxjs';
 
 @Component({
   selector: 'app-can-deactivate',
@@ -21,7 +21,7 @@ export class CanDeactivateComponent implements OnInit {
 
   ngOnInit() {}
 
-  isAllowedToleave() {
+  isAllowedToLeave() {
     return (
       (this.isFormSaved && this.userForm.valid) ||
       !this.userForm.touched ||
@@ -29,7 +29,7 @@ export class CanDeactivateComponent implements OnInit {
     );
   }
 
-  confirm() {
+  confirm(): Observable<boolean> {
     this.openConfirmDialog = true;
     return this.confirmDialog.asObservable();
   }

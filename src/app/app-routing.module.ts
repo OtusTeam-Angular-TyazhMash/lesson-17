@@ -11,7 +11,7 @@ import { CanDeactivateComponent } from './examples/can-deactivate/can-deactivate
 import { ExamplesComponent } from './examples/examples.component';
 import { ResolveComponent } from './examples/resolve/resolve.component';
 import { canActivateChild } from './examples/can-activate-child/can-activate-child.guard';
-import { canDeactivete } from './examples/can-deactivate/can-deactivate.guard';
+import { canDeactivate } from './examples/can-deactivate/can-deactivate.guard';
 import { CanMatchAdminComponent } from './examples/can-match/can-match-admin/can-match-admin.component';
 import { canMatchAdmin } from './examples/can-match/can-match-admin.guard';
 import { CanMatchSupportComponent } from './examples/can-match/can-match-support/can-match-support.component';
@@ -51,7 +51,7 @@ const AppRoutes: Routes = [
       {
         path: 'can-deactivate',
         component: CanDeactivateComponent,
-        canDeactivate: [canDeactivete],
+        canDeactivate: [canDeactivate],
       },
       {
         path: 'can-match',
@@ -88,7 +88,7 @@ const AppRoutes: Routes = [
             return true;
           },
         ],
-        runGuardsAndResolvers: 'paramsChange',
+        runGuardsAndResolvers: 'paramsOrQueryParamsChange',
       },
     ],
   },

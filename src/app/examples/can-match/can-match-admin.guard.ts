@@ -8,5 +8,6 @@ export const canMatchAdmin: CanMatchFn = (
 ): boolean => {
   const authService = inject(AuthService);
 
+  console.log(segments)
   return authService.getRole() === 'Admin';
 };

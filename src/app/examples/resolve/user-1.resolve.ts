@@ -4,9 +4,9 @@ import {
   ResolveFn,
   RouterStateSnapshot,
 } from '@angular/router';
-import { UserService } from '../../services/user.service';
+import {User, UserService} from '../../services/user.service';
 
-export const user1Resolve: ResolveFn<{ id: number; name: string }[]> = (
+export const user1Resolve: ResolveFn<User[]> = (
   route: ActivatedRouteSnapshot,
   state: RouterStateSnapshot
 ) => {
